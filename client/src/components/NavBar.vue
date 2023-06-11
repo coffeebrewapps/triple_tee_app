@@ -42,4 +42,10 @@ import { RouterLink } from 'vue-router';
 .nav a.router-link-exact-active {
   color: var(--color-text);
 }
+
+@media (max-width: 960px) {
+  .nav {
+    padding: 0.5rem 1rem !important;
+  }
+}
 </style>

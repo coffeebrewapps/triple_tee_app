@@ -224,7 +224,7 @@ const muchMore2Cards = [
 .hero {
   display: flex;
   align-items: center;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .hero .wrapper {
@@ -295,6 +295,17 @@ const muchMore2Cards = [
 @media (max-width: 960px) {
   .wrapper {
     max-width: 90vw !important;
+  }
+
+  .hero .title {
+    font-size: 3rem !important;
+    line-height: 3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .hero .subtitle {
+    font-size: 1.6rem !important;
+    line-height: 2rem !important;
   }
 
   .section .paragraph {

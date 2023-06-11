@@ -109,6 +109,10 @@ import { RouterLink } from 'vue-router';
     gap: 4rem;
   }
 
+  .section {
+    width: 100% !important;
+  }
+
   .section.links {
     flex-direction: column !important;
     gap: 2rem;
