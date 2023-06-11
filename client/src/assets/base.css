@@ -1,6 +1,6 @@
-@import '@/../public/fontawesome/css/fontawesome.css';
-@import '@/../public/fontawesome/css/solid.css';
-@import '@/../public/fontawesome/css/brands.css';
+@import '/fontawesome/css/fontawesome.css';
+@import '/fontawesome/css/solid.css';
+@import '/fontawesome/css/brands.css';
 
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
