@@ -1,0 +1,27 @@
+{
+  "name": "triple_tee_app",
+  "version": "0.1.0",
+  "description": "An accounting software built for sole proprietors.",
+  "repository": "git@github.com:coffeebrewapps/triple_tee_app.git",
+  "author": "Coffee Brew Apps <coffeebrewapps@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier client --write",
+    "dev": "vite client",
+    "build": "vite build --emptyOutDir --base=/triple_tee_app client"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "create-vue": "^3.6.4",
+    "eslint": "^8.42.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.2"
+  }
+}
