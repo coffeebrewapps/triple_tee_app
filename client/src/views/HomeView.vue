@@ -182,10 +182,12 @@ const muchMore2Cards = [
 
         <CardsContainer
           :cards="muchMore1Cards"
+          :flat="true"
         />
 
         <CardsContainer
           :cards="muchMore2Cards"
+          :flat="true"
         />
       </div>
     </div>

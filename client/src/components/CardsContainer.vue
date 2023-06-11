@@ -8,6 +8,21 @@ const props = defineProps({
       return [];
     },
   },
+  flat: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const cardClass = computed(() => {
+  const className = [];
+  className.push('card');
+
+  if (props.flat) {
+    className.push('flat');
+  }
+
+  return className.join(' ');
 });
 
 const cardStyle = computed(() => {
@@ -20,7 +35,7 @@ const cardStyle = computed(() => {
     <div
       v-for="(card, i) in cards"
       :key="i"
-      class="card"
+      :class="cardClass"
       :style="cardStyle"
     >
       <div class="title">
@@ -50,6 +65,10 @@ const cardStyle = computed(() => {
   padding: 1rem 1rem 2rem 1rem;
   border-radius: 1rem;
   background-color: var(--color-border-hover);
+}
+
+.cards .card.flat {
+  background-color: initial;
 }
 
 .cards .card .paragraph {
