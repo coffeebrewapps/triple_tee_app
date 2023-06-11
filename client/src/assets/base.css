@@ -1,3 +1,7 @@
+@import '@/../public/fontawesome/css/fontawesome.css';
+@import '@/../public/fontawesome/css/solid.css';
+@import '@/../public/fontawesome/css/brands.css';
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #f2f2f2;
@@ -61,7 +65,7 @@ body.light {
   --color-border-hover: var(--vt-c-brown-bright-hover);
 
   --color-heading: var(--vt-c-brown-bright-less);
-  --color-text: var(--vt-c-brown-bright-less);
+  --color-text: var(--vt-c-brown-dark);
 
   --color-error: var(--vt-c-red);
   --color-error-hover: var(--vt-c-red-darker);
@@ -81,7 +85,7 @@ body.dark {
   --color-text: var(--vt-c-brown-lightest);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --color-background: var(--vt-c-brown-darkest);
     --color-background-soft: var(--vt-c-brown-darker-soft);
@@ -126,6 +130,8 @@ body.dark {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);

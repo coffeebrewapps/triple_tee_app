@@ -1,10 +1,7 @@
 @import './base.css';
 
 #app {
-  width: 100%;
   margin: 0 auto;
-  padding: 1rem 2rem;
-
   font-weight: normal;
 }
 
@@ -12,13 +9,14 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
   max-width: 100vw;
 }
 
 a {
   text-decoration: none;
   color: var(--color-text);
+  font-weight: 600;
   transition: 0.4s;
 }
 
@@ -32,41 +30,6 @@ strong {
 
 .divider {
   border-bottom: 1px solid var(--color-border);
-}
-
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-.tag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.6rem;
-  text-align: center;
-  margin: 4px;
-  padding: 4px;
-  border-radius: 4px;
-  background-color: var(--color-border-hover);
-  color: var(--color-text);
-}
-
-.tag.inline {
-  display: inline-block;
-}
-
-.tag.sm {
-  width: 50px;
-}
-
-.tag.md {
-  width: 150px;
-}
-
-.tag.lg {
-  width: 250px;
 }
 
 .hyperlink {
@@ -135,7 +98,11 @@ strong {
 
 @media (hover: hover) {
   a:hover {
-    background-color: var(--color-border-hover);
-    color: var(--color-text);
+    cursor: pointer;
+    color: var(--color-border);
+    border-radius: 1rem;
   }
+}
+
+@media (min-width: 1024px) {
 }
