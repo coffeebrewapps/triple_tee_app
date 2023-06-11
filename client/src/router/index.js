@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import useConfig from '@/config';
+
+const config = useConfig();
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,9 +13,14 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue'),
+    },
+    {
       path: '/demo',
       name: 'demo',
-      component: () => import('../views/AboutView.vue'),
+      beforeEnter() { location.href = config.demoUrl },
     },
   ],
 });
