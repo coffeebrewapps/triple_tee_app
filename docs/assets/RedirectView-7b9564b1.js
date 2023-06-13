@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as o}from"./index-2944af30.js";const s={},n={class:"page-container"},r=o("h1",null,"Redirecting your request...",-1),a=[r];function _(i,d){return t(),c("div",n,a)}const f=e(s,[["render",_]]);export{f as default};
