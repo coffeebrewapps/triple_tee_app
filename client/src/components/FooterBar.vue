@@ -1,6 +1,42 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { RouterLink } from 'vue-router';
+
+const supportDevImgSrc = computed(() => {
+  const bgColorVar = supportDevBtnState.value ? '--vt-c-brown-bright-hover' : '--vt-c-brown-bright';
+  const bgColor = getComputedStyle(document.documentElement).getPropertyValue(bgColorVar).split('#')[1];
+
+  const txtColorVar = supportDevBtnState.value ? '--vt-c-brown-lighter' : '--vt-c-brown-dark';
+  const txtColor = getComputedStyle(document.documentElement).getPropertyValue(txtColorVar).split('#')[1];
+
+  const parts = [`https://img.buymeacoffee.com/button-api/?`];
+  const query = {
+    text: `Support Dev `,
+    emoji: `❤️`,
+    slug: `gohkhoonhiang`,
+    button_colour: bgColor,
+    font_colour: txtColor,
+    font_family: `Inter`,
+    outline_colour: txtColor,
+    coffee_colour: txtColor,
+  }
+
+  const queryString = (new URLSearchParams(query)).toString();
+
+  parts.push(queryString);
+
+  return parts.join('');
+});
+
+const supportDevBtnState = ref(false) // true: hovered, false: inactive
+
+function supportDevBtnHoverEnter() {
+  supportDevBtnState.value = true
+}
+
+function supportDevBtnHoverLeave() {
+  supportDevBtnState.value = false
+}
 </script>
 
 <template>
@@ -14,6 +50,17 @@ import { RouterLink } from 'vue-router';
 
         <div class="paragraph">
           Made with <i class="fa-solid fa-heart"></i> in Singapore.
+        </div>
+
+        <div class="paragraph">
+          <a
+            href="https://www.buymeacoffee.com/gohkhoonhiang"
+            target="_blank"
+            @mouseover="supportDevBtnHoverEnter"
+            @mouseleave="supportDevBtnHoverLeave"
+          >
+            <img :src="supportDevImgSrc" />
+          </a>
         </div>
       </div>
 
@@ -73,7 +120,7 @@ import { RouterLink } from 'vue-router';
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 50%;
+  width: 40%;
 }
 
 .brand {
@@ -88,7 +135,12 @@ import { RouterLink } from 'vue-router';
 
 .section.links {
   flex-direction: row;
-  gap: 4rem;
+  gap: 2rem;
+  width: 60%;
+}
+
+.column.links {
+  width: 33%;
 }
 
 .column.links .title {
@@ -100,6 +152,10 @@ import { RouterLink } from 'vue-router';
 .links .list {
   list-style-type: none;
   padding-inline-start: 0;
+}
+
+.links .list li {
+  padding: 0.5rem 0;
 }
 
 @media (max-width: 960px) {
