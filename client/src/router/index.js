@@ -21,6 +21,7 @@ const router = createRouter({
       path: '/demo',
       name: 'demo',
       beforeEnter() { location.href = config.demoUrl },
+      component: () => import('../views/RedirectView.vue'),
     },
   ],
 });
