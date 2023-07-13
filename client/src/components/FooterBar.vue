@@ -44,8 +44,10 @@ function supportDevBtnHoverLeave() {
     <div class="wrapper">
       <div class="section">
         <div class="brand">
-          <img style="width: 32px;" src="/icon.png" />
-          <div class="name">Triple Tee App</div>
+          <RouterLink class="nav-item brand" to="/">
+            <img style="width: 32px;" src="/icon.png" />
+            <div class="name">Triple Tee App</div>
+          </RouterLink>
         </div>
 
         <div class="paragraph">

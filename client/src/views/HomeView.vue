@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 import CardsContainer from '@/components/CardsContainer.vue';
 
@@ -94,6 +95,10 @@ const muchMore2Cards = [
     content: 'Tags are stylable, so the data visually makes sense even without reading the detailed texts.',
   },
 ];
+
+onMounted(() => {
+  window.scrollTo(0, 0);
+});
 </script>
 
 <template>
