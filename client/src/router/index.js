@@ -23,6 +23,11 @@ const router = createRouter({
       beforeEnter() { location.href = config.demoUrl },
       component: () => import('../views/RedirectView.vue'),
     },
+    {
+      path: '/howto/cloudsync',
+      name: 'cloudsync',
+      component: () => import('../views/HowToCloudSync.vue'),
+    },
   ],
 });
 
