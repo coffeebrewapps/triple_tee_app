@@ -1,0 +1,130 @@
+@import './base.css';
+@import './prism.css';
+@import './howto.css';
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100vw;
+}
+
+.page-container {
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem 1rem;
+  max-width: 80%;
+  min-height: 80vh;
+  width: 80%;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+h1 {
+  line-height: 4rem;
+}
+
+h2 {
+  line-height: 3.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.heading {
+  font-weight: 900;
+}
+
+.divider {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hyperlink {
+  margin: 2px 0 8px 0;
+}
+
+.hyperlink a {
+  text-decoration: underline;
+}
+
+.hyperlink a:hover {
+  background-color: var(--color-border-hover);
+  color: var(--color-text);
+}
+
+.tooltipable .tooltip {
+  visibility: hidden;
+  padding: 4px;
+  position: absolute;
+  left: 10px;
+  top: 2rem;
+  z-index: 1;
+  background-color: var(--color-border-hover);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.tooltipable .tooltip.align-left {
+  left: initial;
+  right: -3.5rem;
+}
+
+.tooltipable .tooltip.align-right {
+  left: initial;
+  right: 0;
+}
+
+.tooltipable .tooltip.align-middle {
+  top: 1rem;
+}
+
+.tooltipable:hover .tooltip {
+  visibility: visible;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.dialog-enter-active,
+.dialog-leave-active {
+  transition: opacity 0.3s linear;
+}
+
+.dialog-enter-from,
+.dialog-leave-to {
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  a:hover {
+    cursor: pointer;
+    color: var(--color-border);
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+}
