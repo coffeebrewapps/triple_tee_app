@@ -28,6 +28,11 @@ const router = createRouter({
       name: 'cloudsync',
       component: () => import('../views/HowToCloudSync.vue'),
     },
+    {
+      path: '/howto/customtemplate',
+      name: 'customtemplate',
+      component: () => import('../views/HowToCustomTemplate.vue'),
+    },
   ],
 });
 

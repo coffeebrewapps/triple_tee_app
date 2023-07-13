@@ -78,7 +78,7 @@ function supportDevBtnHoverLeave() {
           <div class="title">How-Tos</div>
 
           <ul class="list">
-            <li><a href="#">Customise Template</a></li>
+            <li><RouterLink class="nav-item" to="/howto/customtemplate">Customise Template</RouterLink></li>
             <li><RouterLink class="nav-item" to="/howto/cloudsync">Cloud Sync</RouterLink></li>
           </ul>
         </div>
