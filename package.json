@@ -8,7 +8,8 @@
   "scripts": {
     "format": "prettier client --write",
     "dev": "vite client",
-    "build": "vite build --emptyOutDir --base=/triple_tee_app client"
+    "build": "vite build --emptyOutDir --base=/triple_tee_app client",
+    "build-prod": "vite build --emptyOutDir --base=/ --outDir=dist client"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

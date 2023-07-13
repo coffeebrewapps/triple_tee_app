@@ -9,7 +9,7 @@ const useConfig = () => {
   } else if (env.MODE === 'staging') {
     demoUrl.value = '/triple_tee_app-demo';
   } else {
-    demoUrl.value = 'demo.tripletee.app';
+    demoUrl.value = 'https://demo.tripletee.app';
   }
 
   return {
