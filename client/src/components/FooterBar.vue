@@ -70,7 +70,7 @@ function supportDevBtnHoverLeave() {
 
           <ul class="list">
             <li><a href="#">Documentation</a></li>
-            <li><a href="#">Source Code</a></li>
+            <li><a href="https://github.com/coffeebrewapps/triple_tee-source" target="_blank">Source Code</a></li>
           </ul>
         </div>
 
